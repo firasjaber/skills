@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-labelledby="title desc">
+  <title id="title">Git Commit Logically</title>
+  <desc id="desc">A branching git graph with grouped commit nodes.</desc>
+  <rect width="400" height="400" rx="64" fill="#0f172a"/>
+  <path d="M122 93v214M122 156h82c42 0 74 34 74 76v75" fill="none" stroke="#93c5fd" stroke-width="26" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="122" cy="93" r="34" fill="#2563eb"/>
+  <circle cx="122" cy="200" r="34" fill="#38bdf8"/>
+  <circle cx="122" cy="307" r="34" fill="#60a5fa"/>
+  <circle cx="278" cy="232" r="34" fill="#22c55e"/>
+  <circle cx="278" cy="307" r="34" fill="#84cc16"/>
+</svg>

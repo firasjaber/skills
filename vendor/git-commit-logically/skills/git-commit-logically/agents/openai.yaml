@@ -1,0 +1,7 @@
+interface:
+    brand_color: "#2563EB"
+    default_prompt: "Use $git-commit-logically to inspect the current git tree and create local commits in coherent groups without pushing."
+    display_name: "Git Commit Logically"
+    icon_large: "./assets/git-commit-logically.svg"
+    icon_small: "./assets/git-commit-logically-small.svg"
+    short_description: "Commit current changes in logical groups"
