@@ -13,8 +13,33 @@ This repository contains separate skills for building software in one conversati
 
 The paths under `docs/` refer to the software project where you use these skills.
 
+## Install
+
+The skills live together in this repository. Install the full workflow for Codex across your projects with:
+
+```sh
+npx skills add firasjaber/skills --skill '*' -g -a codex
+```
+
+The `-g` flag installs skills for your user account. The `-a codex` flag selects Codex. Omit `-g` to install into the current project instead. The GitHub repository must be accessible to the person who runs the command.
+
+To install one skill, run its command:
+
+```sh
+npx skills add firasjaber/skills --skill idea-to-spec -g -a codex
+npx skills add firasjaber/skills --skill spec-to-plan -g -a codex
+npx skills add firasjaber/skills --skill plan-to-code -g -a codex
+npx skills add firasjaber/skills --skill review-and-simplify -g -a codex
+npx skills add firasjaber/skills --skill record-decisions -g -a codex
+npx skills add firasjaber/skills --skill commit-changes -g -a codex
+npx skills add firasjaber/skills --skill ponytail -g -a codex
+npx skills add firasjaber/skills --skill simple-english -g -a codex
+```
+
+The full workflow needs all eight skills. To see what the CLI finds before installation, run `npx skills add firasjaber/skills --list`. Start the workflow with `$idea-to-spec`.
+
 ## Shared skills
 
 [`ponytail`](skills/ponytail/SKILL.md) helps the planning, implementation, and review stages keep code and tests small. [`simple-english`](skills/simple-english/SKILL.md) keeps the conversation and written records clear.
 
-The source files live in [`skills/`](skills/). Links in `.agents/skills/` make them available to Codex in this repository. [`vendor/SOURCES.md`](vendor/SOURCES.md) lists the upstream material used as a reference.
+The source files live in [`skills/`](skills/). [`vendor/SOURCES.md`](vendor/SOURCES.md) lists the upstream material used as a reference.
