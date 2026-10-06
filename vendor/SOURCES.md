@@ -19,6 +19,10 @@ include `brainstorming`, `writing-plans`, `executing-plans`, `subagent-driven-de
 `verification-before-completion`, and `using-superpowers`, with their supporting
 files. They are reference material while the local workflow is redesigned.
 
+The active `workflow-conventions` skill adapts the checklist and todo rules of
+`brainstorming` and `using-superpowers`, and the harness tool mappings in
+`using-superpowers/references/`.
+
 The active `record-decisions` skill adapts the original `recording-decisions`
 skill for the ADR stage of this workflow.
 The active `commit-changes` skill adapts `git-commit-logically` for the local

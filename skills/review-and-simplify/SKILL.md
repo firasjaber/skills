@@ -7,7 +7,17 @@ description: Use when an implementation has finished its checks and needs a fres
 
 Review the finished change, fix material findings, and leave the code and tests as small as the approved behavior allows. This stage starts after `plan-to-code` has run the relevant project checks and before decisions and commits are recorded.
 
-Load `simple-english` in Plain mode for review discussion and the final report. Load `ponytail` for the simplicity pass. Keep exact code names, paths, commands, and quoted output intact.
+Load `simple-english` in Plain mode for review discussion and the final report. Load `ponytail` for the simplicity pass. Load `workflow-conventions` for the todo list, the question format, and the findings list. Keep exact code names, paths, commands, and quoted output intact.
+
+## Checklist
+
+Add these steps to the workflow todo list when the stage starts, and complete them in order:
+
+1. Prepare the review scope.
+2. Run the fresh review.
+3. Fix or explain each finding.
+4. Rerun the affected checks.
+5. Hand off to `record-decisions`.
 
 ## Prepare the review
 

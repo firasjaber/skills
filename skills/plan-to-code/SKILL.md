@@ -7,7 +7,18 @@ description: Use when an approved implementation plan is ready to execute in the
 
 Implement the approved plan in the current session. The spec defines the promised behavior. The plan names the chosen approach and checks. Complete the work before offering the final review.
 
-Load `simple-english` in Plain mode for progress updates, questions, and the final handoff. Load `ponytail` for code and test choices. Preserve exact names, commands, and quoted output.
+Load `simple-english` in Plain mode for progress updates, questions, and the final handoff. Load `ponytail` for code and test choices. Load `workflow-conventions` for the todo list and the question format. Preserve exact names, commands, and quoted output.
+
+## Checklist
+
+Add these steps to the workflow todo list when the stage starts:
+
+1. Read the spec, the plan, and the starting state.
+2. Implement the plan tasks.
+3. Verify the result against the spec.
+4. Hand off to `review-and-simplify`.
+
+In place of step 2, add one step for each plan task, with the task number and name from the plan.
 
 ## Start
 
@@ -22,11 +33,11 @@ Work through the plan's tasks in order. Keep going between tasks without asking 
 1. Read the relevant code path and callers. Reuse existing code before adding a helper, dependency, or file.
 2. Make the smallest change that delivers the task's behavior. Preserve security, accessibility, data safety, and explicit constraints.
 3. Add or update only tests that catch a distinct behavior or realistic regression. Use the existing tests and checks named in the plan where they already give confidence.
-4. Run the task's relevant check, read its output, and fix failures caused by this work. Mark the task complete only when its behavior and check both hold.
+4. Run the task's relevant check, read its output, and fix failures caused by this work. Mark the task done only when its behavior and check both hold. Then change its heading in the plan file from `[ ]` to `[x]`.
 
 The spec wins when the plan and spec disagree. Record a short note about any implementation choice that changes the plan, including why it was needed. Update the plan when the change affects later tasks or verification. Bring any change to user-visible behavior back to the user and the spec.
 
-Keep the task progress visible in a concise running update or the available task tracker. Resume from the first unfinished task if the session is interrupted. Stage and commit only in the final commit stage.
+The todo list shows progress, and the `[x]` marks in the plan file keep the record. If the plan has no marks, add `[ ]` to each task heading before the first task. After an interruption or a context compaction (the harness replaces older messages with a summary), make sure that the marked tasks match Git status and the diff. Then resume from the first task without `[x]`. Stage and commit only in the final commit stage.
 
 ## Verify the result
 

@@ -7,7 +7,16 @@ description: Use after decision recording, or when the user asks to stage finish
 
 Turn the finished work into a series of coherent local commits. This stage follows `record-decisions` in the same session, or starts when the user directly asks to commit. The user's agreement to this handoff or direct commit request authorizes the local commits; do not ask again for each group. Use the current branch. Do not create or switch branches, merge, or push.
 
-Load `simple-english` in Plain mode for commit messages and the final report. Preserve exact code names and commands. Follow repository commit rules, including `.github/agent-commit-message-instructions.md` when present; otherwise inspect recent messages for the local style.
+Load `simple-english` in Plain mode for commit messages and the final report. Load `workflow-conventions` for the todo list, the question format, and the commit list. Preserve exact code names and commands. Follow repository commit rules, including `.github/agent-commit-message-instructions.md` when present; otherwise inspect recent messages for the local style.
+
+## Checklist
+
+Add these steps to the workflow todo list when the stage starts, and complete them in order:
+
+1. Set the scope.
+2. Group the commits.
+3. Stage and commit each group.
+4. Report the result.
 
 ## Set the scope
 

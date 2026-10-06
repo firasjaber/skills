@@ -1,6 +1,6 @@
 # Skills
 
-This repository contains separate skills for building software in one conversation. Each stage finishes its own work and asks before starting the next stage.
+This repository contains separate skills for building software in one conversation. Each stage finishes its own work and asks before starting the next stage. One todo list shows the current stage and step for the whole workflow.
 
 ## Flow
 
@@ -34,12 +34,15 @@ npx skills add firasjaber/skills --skill record-decisions -g -a codex
 npx skills add firasjaber/skills --skill commit-changes -g -a codex
 npx skills add firasjaber/skills --skill ponytail -g -a codex
 npx skills add firasjaber/skills --skill simple-english -g -a codex
+npx skills add firasjaber/skills --skill workflow-conventions -g -a codex
 ```
 
-The full workflow needs all eight skills. To see what the CLI finds before installation, run `npx skills add firasjaber/skills --list`. Start the workflow with `$idea-to-spec`.
+The full workflow needs all nine skills. To see what the CLI finds before installation, run `npx skills add firasjaber/skills --list`. Start the workflow with `$idea-to-spec`.
 
 ## Shared skills
 
-[`ponytail`](skills/ponytail/SKILL.md) helps the planning, implementation, and review stages keep code and tests small. [`simple-english`](skills/simple-english/SKILL.md) keeps the conversation and written records clear.
+[`ponytail`](skills/ponytail/SKILL.md) helps the planning, implementation, and review stages keep code and tests small. [`simple-english`](skills/simple-english/SKILL.md) keeps the conversation and written records clear. [`workflow-conventions`](skills/workflow-conventions/SKILL.md) sets the rules that every stage shares: the todo list, questions with a recommended option, the visible self-review result, and the replies that can use lists.
+
+In Codex, the question tool `request_user_input` is available only in Plan mode by default. To use it in Default mode, add `default_mode_request_user_input = true` under `[features]` in `~/.codex/config.toml`. Without it, the skills write the options as a numbered list.
 
 The source files live in [`skills/`](skills/). [`vendor/SOURCES.md`](vendor/SOURCES.md) lists the upstream material used as a reference.

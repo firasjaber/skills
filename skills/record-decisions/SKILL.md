@@ -7,7 +7,19 @@ description: Use after final implementation review, or when an agreed technical 
 
 Record choices that future contributors and agents need to follow. Run this stage after `review-and-simplify`, using the approved spec, implementation plan, conversation, final code, and review outcome. Use an architecture decision record (ADR) for a durable rule about architecture, data, dependencies, interfaces, or operations. Use the running log for a smaller choice whose reason will help later work. Skip routine code choices and facts already clear from the code.
 
-Load `simple-english` in Plain mode for the discussion and every record. Keep exact code names, paths, commands, and quoted evidence intact.
+Load `simple-english` in Plain mode for the discussion and every record. Load `workflow-conventions` for the todo list, the question format, and the self-review result. Keep exact code names, paths, commands, and quoted evidence intact.
+
+## Checklist
+
+Add these steps to the workflow todo list when the stage starts, and complete them in order:
+
+1. Find the decisions.
+2. Agree on the list with the user.
+3. Write the records.
+4. Review the records.
+5. Hand off to `commit-changes`.
+
+If there are no decisions to record, remove steps 3 and 4.
 
 ## Find decisions
 
@@ -49,6 +61,6 @@ Append smaller decisions to `docs/adrs/decision-log.md`. Follow an existing log 
 
 ## Review and handoff
 
-Read each saved ADR and log entry as a future implementer. Make sure the choice and reason are clear, the trade-off is honest, and the references match the final code. Show the records to the user and incorporate corrections before continuing. Do not stage or commit in this stage.
+Read each saved ADR and log entry as a future implementer. Make sure the choice and reason are clear, the trade-off is honest, and the references match the final code. Post the review result in the `workflow-conventions` format. Show the records to the user and incorporate corrections before continuing. Do not stage or commit in this stage.
 
 Ask whether to continue to `commit-changes` in this session. If the user agrees, pass the spec and plan paths, final review result, ADR and log paths, starting commit, and pre-existing change list. If this stage wrote no decision record, say that in the handoff.
